@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
 });
 app.get('/set', function(req, res) {
     console.log(JSON.stringify(req.query));
-    data.push({ xx: req.query.x });
+    data.push({ xyx: req.query.x });
     res.send({
         x: req.query.x
     });
@@ -21,7 +21,8 @@ app.get('/get', function(req, res) {
     res.send(JSON.stringify(data));
 });
 app.get('/pac', function(req, res) {
-    res.sendFile('/PacMan' + req.query.id + '.png', { 'root': root });
+    /res.sendFile('/PacMan' + req.query.id + '.png', { 'root': root });/
+    res.sendFile(req.query.id + '.png', { 'root': root });
 });
 
 app.listen(3000);
