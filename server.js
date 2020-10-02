@@ -21,7 +21,7 @@ app.get('/get', function(req, res) {
     res.send(JSON.stringify(data));
 });
 app.get('/pac', function(req, res) {
-    /res.sendFile('/PacMan' + req.query.id + '.png', { 'root': root });/
+    //res.sendFile('/PacMan' + req.query.id + '.png', { 'root': root });/
     res.sendFile('/' + req.query.id + '.png', { 'root': root });
 });
 
