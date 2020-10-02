@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
 });
 app.get('/set', function(req, res) {
     console.log(JSON.stringify(req.query));
-    data.push({ x: req.query.x });
+    data.push({ xx: req.query.x });
     res.send({
         x: req.query.x
     });
