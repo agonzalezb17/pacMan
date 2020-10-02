@@ -22,7 +22,7 @@ app.get('/get', function(req, res) {
 });
 app.get('/pac', function(req, res) {
     /res.sendFile('/PacMan' + req.query.id + '.png', { 'root': root });/
-    res.sendFile(req.query.id + '.png', { 'root': root });
+    res.sendFile('/' + req.query.id + '.png', { 'root': root });
 });
 
 app.listen(3000);
